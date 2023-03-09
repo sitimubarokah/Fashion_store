@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+<!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+  <menuitem id="fashion_menu_root"
+            name="FASHION STORE"
+            sequence="10"/>
+
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_supplier_menu_categ" 
+          name="SUPPLIER" 
+          parent="fashion_menu_root" 
+          sequence="10"/>
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_produk_menu_categ" 
+          name="PRODUK" 
+          parent="fashion_menu_root"
+          sequence="20"/>
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_penjualan_menu_categ" 
+          name="PENJUALAN" 
+          parent="fashion_menu_root" 
+          sequence="40"/>
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_order_menu_categ" 
+          name="ORDER" 
+          parent="fashion_menu_root" 
+          sequence="45"/>  
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_pelanggan_menu_categ" 
+          name="PELANGGAN" 
+          parent="fashion_menu_root" 
+          sequence="50"/> 
+
+<!-- This Menu Item must have a parent and an action -->
+<menuitem id="fashion_pegawai_menu_categ" 
+          name="PEGAWAI" 
+          parent="fashion_menu_root" 
+          sequence="30"/>                              
+
+</odoo>

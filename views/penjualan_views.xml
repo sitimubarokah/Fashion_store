@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- fashionstore.penjualan tree view -->
+    <record id="fashionstore_penjualan_view_tree" model="ir.ui.view">
+        <field name="name">Penjualan</field>
+        <field name="model">fashionstore.penjualan</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="tanggal"/>
+                <field name="pelanggan_id"/>
+                <field name="produk_ids"/>
+                <field name="ttl_bayar"/>
+                <field name="metode"/>
+                <field name="sudah_bayar"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- fashionstore.penjualan form view -->
+    <record id="fashionstore_penjualan_view_form" model="ir.ui.view">
+        <field name="name"></field>
+        <field name="model">fashionstore.penjualan</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="tanggal"/>
+                        <field name="pelanggan_id"/>
+                    </group>
+                    <group>
+                        <field name="ttl_bayar"/>
+                        <field name="metode"/>
+                    </group>
+                    <group name='nama' string=''>
+                        <field name="produk_ids">
+                            <tree editable="bottom">
+                                <field name="produk_id"/>
+                                <field name="harga_satuan"/>
+                                <field name="qty"/>
+                                <field name="harga" sum="total"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <group>
+                        <field name="sudah_bayar"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- fashionstore.penjualan action window -->
+    <record id="fashionstore_penjualan_action" model="ir.actions.act_window">
+        <field name="name">Penjualan</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fashionstore.penjualan</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="fashionstore_penjualan_menu_act" 
+              name="Penjualan" 
+              parent="fashion_penjualan_menu_categ" 
+              action="fashionstore_penjualan_action" 
+              sequence="20"/>
+    
+</odoo>

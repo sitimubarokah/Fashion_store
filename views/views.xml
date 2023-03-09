@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="fashion__store.list">
+      <field name="name">Fashion_Store list</field>
+      <field name="model">fashion__store.fashion__store</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="fashion__store.action_window">
+      <field name="name">Fashion_Store window</field>
+      <field name="res_model">fashion__store.fashion__store</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="fashion__store.action_server">
+      <field name="name">Fashion_Store server</field>
+      <field name="model_id" ref="model_fashion__store_fashion__store"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="Fashion_Store" id="fashion__store.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="fashion__store.menu_1" parent="fashion__store.menu_root"/>
+    <menuitem name="Menu 2" id="fashion__store.menu_2" parent="fashion__store.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="fashion__store.menu_1_list" parent="fashion__store.menu_1"
+              action="fashion__store.action_window"/>
+    <menuitem name="Server to list" id="fashion__store" parent="fashion__store.menu_2"
+              action="fashion__store.action_server"/>
+-->
+  </data>
+</odoo>

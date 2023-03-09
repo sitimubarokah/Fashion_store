@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fashionstore_supplier,access.fashionstore.supplier,model_fashionstore_supplier,,1,1,1,1
+access_fashionstore_produk,access.fashionstore.produk,model_fashionstore_produk,,1,1,1,1
+access_fashionstore_penjualan,access.fashionstore.penjualan,model_fashionstore_penjualan,,1,1,1,1
+access_fashionstore_partner,access.fashionstore.partner,model_fashionstore_partner,,1,1,1,1
+access_fashionstore_pegawai,access.fashionstore.pegawai,model_fashionstore_pegawai,,1,1,1,1
+access_fashionstore_pelanggan,access.fashionstore.pelanggan,model_fashionstore_pelanggan,,1,1,1,1
+access_fashionstore_penjualandetail,access.fashionstore.penjualandetail,model_fashionstore_penjualandetail,,1,1,1,1
+access_fashionstore_pembayaran,access.fashionstore.pembayaran,model_fashionstore_pembayaran,,1,1,1,1

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+
+    <!-- fashionstore.produk tree view -->
+    <record id="fashionstore_produk_view_tree" model="ir.ui.view">
+        <field name="name">Produk</field>
+        <field name="model">fashionstore.produk</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="jenis"/>
+                <field name="img" widget="image"/>
+                <field name="ukuran"/>
+                <field name="varian"/>
+                <field name="bahan"/>
+                <field name="harga"/>
+                <field name="stok"/>
+                <field name="supplier"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- fashionstore.produk form view -->
+    <record id="fashionstore_produk_view_form" model="ir.ui.view">
+        <field name="name">Produk</field>
+        <field name="model">fashionstore.produk</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="deskripsi"/>
+                        <field name="jenis"/>
+                        <field name="img" widget="image"/>
+                    </group>
+                    <group>
+                        <field name="ukuran"/>
+                        <field name="varian"/>
+                        <field name="bahan"/>
+                    </group>
+                    <group>
+                        <field name="harga"/>
+                        <field name="stok"/>  
+                    </group>
+                    <group>
+                        <field name="supplier"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- fashionstore.produk kanban view -->
+    <record id="fashionstore_produk_view_kanban" model="ir.ui.view">
+     <field name="name"></field>
+     <field name="model">fashionstore.produk</field>
+     <field name="arch" type="xml">
+        <kanban class="o_res_partner_kanban" sample="1">
+            <field name="name"/>
+            <field name="jenis"/>
+            <field name="stok"/>
+            <field name="img" widget="image"/>
+            <field name="harga" widget="monetary"/>
+                <templates>
+                <t t-name="kanban-box">
+                    <div class="oe_kanban_global_click o_kanban_record_has_image_fill">
+                        <div class="oe_kanban_details d-flex flex-column">
+                            <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                            <div class="row flex">
+                                <div class="col-md-4">
+                                    <field name="img" widget="image"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul>
+                                        <li><h6 style="color:blue"><field name="name"/></h6></li>
+                                        <li><h6 style="color:green"><field name="jenis"/></h6></li>
+                                        <li><h6 style="color:black"><field name="stok"/></h6></li>
+                                        <li><span><h6 style="text-align:right">Rp. <field name="harga"/></h6></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="o_row">
+                                <span class="oe_kanban_partner_links"/>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                </templates>
+        </kanban>
+     </field>
+    </record>
+
+    <!-- fashionstore.produk action window -->
+    <record id="fashionstore_produk_action" model="ir.actions.act_window">
+        <field name="name">Produk</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">fashionstore.produk</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="fashionstore_produk_menu_act" 
+              name="Produk" 
+              parent="fashion_produk_menu_categ" 
+              action="fashionstore_produk_action" 
+              sequence="10"/>
+    
+</odoo>
