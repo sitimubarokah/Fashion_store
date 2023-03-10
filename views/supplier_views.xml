@@ -32,8 +32,19 @@
                     <group>
                         <field name="cp"/>
                         <field name="telp"/>
-                        <field name="produk_ids"/>
                     </group>
+                    <notebook>
+                        <page name="detail_barang" string="DETAIL BARANG">
+                            <field name="produk_ids" widget="section_and_note_one2many" mode="tree,kanban">
+                                <tree editable="buttom">
+                                    <field name="name"/>
+                                    <field name="img" widget="image" />
+                                    <field name="stok" />
+                                    <field name="harga" widget="monetary"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
